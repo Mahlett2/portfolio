@@ -1,0 +1,158 @@
+.skills {
+  padding: 100px 0;
+  background: #fff;
+  color: black;
+}
+
+.start {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.start h1 {
+  font-size: 36px;
+}
+
+.start span {
+  color: orangered;
+}
+
+.box {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heading {
+  background-color: rgba(196, 194, 194, 0.952);
+  box-shadow: 0 0 5px 5px lightgray;
+  width: 100%;
+  max-width: 350px;
+  min-height: 200px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.heading:hover {
+  transform: translateY(-10px);
+}
+
+.heading h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Skill items - initially semi-transparent */
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  opacity: 0.6; /* Semi-transparent text */
+  transform: scale(0.95); /* Slightly smaller */
+}
+
+/* Hover effects */
+.heading:hover .skill-item {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Normal size */
+  background: rgba(255, 255, 255, 0.8); /* More opaque background */
+  box-shadow: 0 2px 8px rgba(255, 69, 0, 0.3); /* Orange shadow */
+}
+
+/* Individual item hover delays for staggered effect */
+.heading:hover .skill-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.heading:hover .skill-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.heading:hover .skill-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.heading:hover .skill-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+  .box {
+    gap: 20px;
+  }
+
+  .heading {
+    max-width: 300px;
+    min-height: 180px;
+    padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skills {
+    padding: 80px 0;
+  }
+
+  .start h1 {
+    font-size: 32px;
+  }
+
+  .heading {
+    max-width: 100%;
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .skill-item {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .start h1 {
+    font-size: 28px;
+  }
+
+  .heading {
+    padding: 15px;
+    min-height: 130px;
+  }
+
+  .heading h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .skill-item {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .skill-items {
+    gap: 8px;
+  }
+}

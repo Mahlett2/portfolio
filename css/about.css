@@ -1,0 +1,141 @@
+#about {
+  padding: 100px 0;
+  color: white;
+  background-color: black;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px orangered, 0 0 15px orangered;
+  transition: 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.image:hover img {
+  box-shadow: 0 0 10px powderblue, 0 0 15px powderblue;
+}
+
+.head {
+  flex: 1;
+  padding: 20px;
+}
+
+.head h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.head h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.head p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.head span {
+  color: rgb(253, 57, 3);
+}
+
+.linkk {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  background: orangered;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.linkk a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.linkk:hover {
+  background: purple;
+}
+
+.linkk:hover a {
+  color: white;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .head {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    padding: 80px 0;
+  }
+
+  .head h1 {
+    font-size: 32px;
+  }
+
+  .head h2 {
+    font-size: 24px;
+  }
+
+  .head p {
+    font-size: 16px;
+  }
+
+  .linkk {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .head h1 {
+    font-size: 28px;
+  }
+
+  .head h2 {
+    font-size: 20px;
+  }
+
+  .image img {
+    max-width: 300px;
+  }
+}

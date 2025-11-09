@@ -1,0 +1,129 @@
+.projects {
+  padding: 100px 0;
+  color: black;
+  background: #fff;
+}
+
+.pro-head {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.pro-head h1 {
+  font-size: 36px;
+}
+
+.pro-head span {
+  color: orangered;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s;
+}
+
+.work:hover {
+  transform: translateY(-10px);
+}
+
+.work img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  font-size: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), orangered);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: aliceblue;
+  padding: 0 20px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.layer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+  .work {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects {
+    padding: 80px 0;
+  }
+
+  .pro-head h1 {
+    font-size: 32px;
+  }
+
+  .work {
+    max-width: 100%;
+  }
+
+  .layer h3 {
+    font-size: 18px;
+  }
+
+  .layer p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pro-head h1 {
+    font-size: 28px;
+  }
+
+  .work img {
+    height: 200px;
+  }
+
+  .layer h3 {
+    font-size: 16px;
+  }
+}
